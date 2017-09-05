@@ -29,6 +29,9 @@ ext {
           butterknife        : ('com.jakewharton:butterknife:8.6.0'),
           butterknifecompiler: ('com.jakewharton:butterknife-compiler:8.6.0'),
 
+          dagger             : ('com.google.dagger:dagger:2.11'),
+          daggercompiler     : ('com.google.dagger:dagger-compiler:2.11'),
+
           timber             : ('com.jakewharton.timber:timber:4.5.1')];
 }
 

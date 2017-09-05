@@ -1,6 +1,9 @@
 package de.appcom.pokedexapp4;
 
 import android.app.Application;
+import de.appcom.pokedexapp4.di.ApplicationComponent;
+import de.appcom.pokedexapp4.di.ApplicationModule;
+import de.appcom.pokedexapp4.di.DaggerApplicationComponent;
 import timber.log.Timber;
 
 /**
@@ -9,10 +12,17 @@ import timber.log.Timber;
 
 public class PokedexApplication extends Application {
 
+  ApplicationComponent component;
+
   @Override public void onCreate() {
     super.onCreate();
 
     setupTimber();
+    setupDependencyInjection();
+  }
+
+  private void setupDependencyInjection() {
+    component = DaggerApplicationComponent.builder().applicationModule(new ApplicationModule(this)).build();
   }
 
   private void setupTimber() {
@@ -24,5 +34,9 @@ public class PokedexApplication extends Application {
         }
       });
     }
+  }
+
+  public ApplicationComponent getApplicationComponent() {
+    return component;
   }
 }

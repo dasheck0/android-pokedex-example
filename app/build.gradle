@@ -27,4 +27,6 @@ dependencies {
   compile libs.timber
   compile libs.butterknife;
   annotationProcessor libs.butterknifecompiler;
+  compile libs.dagger
+  annotationProcessor libs.daggercompiler
 }
