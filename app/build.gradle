@@ -25,4 +25,6 @@ dependencies {
   compile libs.appcompat
   compile libs.constraint
   compile libs.timber
+  compile libs.butterknife;
+  annotationProcessor libs.butterknifecompiler;
 }

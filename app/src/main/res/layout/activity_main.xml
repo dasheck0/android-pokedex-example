@@ -6,7 +6,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="de.appcom.pokedexapp4.activities.MainActivity"
-    android:background="@color/colorPrimary"
     >
 
   <TextView
