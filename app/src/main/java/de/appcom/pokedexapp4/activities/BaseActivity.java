@@ -1,7 +1,6 @@
 package de.appcom.pokedexapp4.activities;
 
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
 import butterknife.ButterKnife;
 import butterknife.Unbinder;
@@ -16,7 +15,6 @@ import de.appcom.pokedexapp4.fragments.dashboard.DashboardFragment;
 import de.appcom.pokedexapp4.fragments.dashboard.DashboardModule;
 import de.appcom.pokedexapp4.fragments.dashboard.DashboardPresenterImpl;
 import java.lang.annotation.Annotation;
-import java.util.prefs.PreferenceChangeEvent;
 
 /**
  * @author Stefan Neidig

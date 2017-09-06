@@ -1,6 +1,7 @@
 package de.appcom.pokedexapp4;
 
 import android.app.Application;
+import de.appcom.model.di.ModelModule;
 import de.appcom.pokedexapp4.di.ApplicationComponent;
 import de.appcom.pokedexapp4.di.ApplicationModule;
 import de.appcom.pokedexapp4.di.DaggerApplicationComponent;
@@ -22,7 +23,10 @@ public class PokedexApplication extends Application {
   }
 
   private void setupDependencyInjection() {
-    component = DaggerApplicationComponent.builder().applicationModule(new ApplicationModule(this)).build();
+    component = DaggerApplicationComponent.builder()
+        .applicationModule(new ApplicationModule(this))
+        .modelModule(new ModelModule())
+        .build();
   }
 
   private void setupTimber() {
